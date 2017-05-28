@@ -1,0 +1,53 @@
+#####################################
+# JEC Tiger Project Sample .gitignore
+# Please maintain alphabetical order!
+#####################################
+
+#####################################
+# VSCE
+#####################################
+
+# Ignore VSCE folder
+.vscode
+
+#####################################
+# Documentation
+#####################################
+
+# Ignore docs folder
+docs
+
+#####################################
+# juta
+#####################################
+
+# Ignore JavaScript files in juta folder
+juta/**/*.js
+
+#####################################
+# node_modules
+#####################################
+
+# Ignore 'node_modules' folder
+node_modules
+
+#####################################
+# sample
+#####################################
+
+# Ignore JavaScript files in sample folder
+sample/**/*.js
+
+#####################################
+# src
+#####################################
+
+# Ignore JavaScript files in src folder
+src/**/*.js
+
+#####################################
+# test
+#####################################
+
+# Ignore JavaScript files in test folder
+test/**/*.js

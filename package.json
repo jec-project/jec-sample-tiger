@@ -1,0 +1,43 @@
+{
+  "name": "jec-sample-tiger",
+  "version": "1.0.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "description": "JEC Tiger Project Sample - A fully customizable application that shows how to implement Unit Tests with the JEC Tiger framework.",
+  "author": {
+    "name": "Pascal ECHEMANN",
+    "email": "pascal@wooz.io",
+    "url": "http://wooz.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pechemann/jec-sample-tiger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pechemann/jec-tiger/issues"
+  },
+  "homepage": "https://github.com/pechemann/jec-tiger#readme",
+  "keywords": [
+    "JEC",
+    "Tiger",
+    "JUTA",
+    "sample",
+    "example",
+    "Unit Tests",
+    "mocha",
+    "JavaScript",
+    "TypeScript",
+    "applications"
+  ],
+  "devDependencies": {
+    "@types/chai": "^3.5.1",
+    "@types/node": "^7.0.22",
+    "chai": "^3.5.0",
+    "jec-juta": "^1.0.1",
+    "jec-tiger": "^1.0.0",
+    "mocha": "^3.4.2",
+    "typings": "^2.1.0"
+  },
+  "scripts": {
+    "test": "mocha juta/tiger/run-unit-tests"
+  }
+}
