@@ -15,32 +15,18 @@
 //   limitations under the License.
 
 import { TestSuite, Test } from "jec-juta";
-import { expect } from "chai";
-import { Calculator } from "../src/Calculator";
-import { CalculatorFactory } from "../src/CalculatorFactory";
+import { assert } from "chai";
 
 @TestSuite({
-  description: "Tests the methods of the CalculatorFactory class"
+  description: "DisabledTest test suite should be ignored by the Tiger test runner",
+  disabled: true
 })
-export class CalculatorFactoryTest {
-
-  @Test({
-    description: "#create() should return new objects that implement the Calculator interface"
-  })
-  public testCreate():void {
-    let factory:CalculatorFactory = new CalculatorFactory();
-    let calc1:Calculator = factory.create();
-    let calc2:Calculator = factory.create();
-    expect(calc1).not.to.be.null;
-    expect(calc2).not.to.be.null;
-    expect(calc1).not.to.equal(calc2);
-  }
+export class DisabledTest {
   
   @Test({
-    description: "should be ignored by the Tiger test runner",
-    disabled: true
+    description: "should be ignored by the Tiger test runner"
   })
   public disabledTest():void {
-    throw new Error("This error should never be called.");
+    assert.fail("called", "not called");
   }
 }
