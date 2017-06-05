@@ -31,7 +31,7 @@
   "devDependencies": {
     "@types/chai": "^3.5.1",
     "chai": "^3.5.0",
-    "jec-juta": "^1.0.1",
+    "jec-juta": "^1.0.2",
     "jec-tiger": "^1.0.0",
     "mocha": "^3.4.2",
     "typings": "^2.1.0"
