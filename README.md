@@ -22,10 +22,10 @@ JEC Tiger needs the following system parameters in order to work correctly:
 
 ## Installation
 
-Set up the JEC Tiger Project Sample module with:
+Clone, or download, the JEC Tiger Project Sample module and then set up the application with:
 
 ```bash
-$ npm install jec-sample-tiger
+$ npm install
 ```
 
 Then, use the [TypeScript](https://www.typescriptlang.org/) compiler to generate all of the javaScript files
