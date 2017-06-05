@@ -14,10 +14,21 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
+import { TestStats } from "jec-juta";
 import { Tiger, TigerFactory } from "jec-tiger";
 
 let factory:TigerFactory = new TigerFactory();
 let tester:Tiger = factory.create();
-tester.process((err:any)=> {
-  if(err) console.error(err);
- });
+tester.process((stats:TestStats)=> {
+  if(stats.error) console.error(stats.error);
+  else {
+    console.log(
+`Test stats:
+- number of test suites: ${stats.numTestSuites}
+- number of disabled test suites: ${stats.numDisabledTestSuites}
+- number of synchronous test cases: ${stats.numTests}
+- number of asynchronous test cases: ${stats.numAsyncTests}
+- number of disabled test cases: ${stats.numDisabledTests}`
+    )
+  }
+});

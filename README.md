@@ -79,13 +79,14 @@ The `juta` folder is where JUTA configuration files are located. The following c
 `run-unit-tests.ts`
 
 ```javascript
+import { TestStats } from "jec-juta";
 import {Tiger, TigerFactory} from "jec-tiger";
 
 let factory:TigerFactory = new TigerFactory();
 let tester:Tiger = factory.create();
-tester.process((err:any)=>{
-  console.log(err);
-});
+tester.process((stats:TestStats)=> {
+  if(stats.error) console.error(stats.error);
+ });
 ```
 
 Because test classes are decoupled from JUTA implementations, you may want to use different test frameworks in the same project:
