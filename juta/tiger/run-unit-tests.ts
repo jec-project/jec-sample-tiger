@@ -24,7 +24,7 @@ tester.process((stats:TestStats)=> {
   else {
     console.log(
 `Test stats:
-- test process duration: ${stats.time}
+- test lookup process duration: ${stats.time}
 - number of test suites: ${stats.numTestSuites}
 - number of disabled test suites: ${stats.numDisabledTestSuites}
 - number of synchronous test cases: ${stats.numTests}
