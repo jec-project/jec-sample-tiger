@@ -14,7 +14,7 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import { TestSuite, Test, Before, BeforeClass, AfterClass } from "jec-juta";
+import { TestSuite, Test, Before, BeforeAll, AfterAll } from "jec-juta";
 import { expect } from "chai";
 import { CalculatorImpl } from "../../src/impl/CalculatorImpl";
 import { CalculatorOperation } from "../../src/operations/CalculatorOperation";
@@ -33,12 +33,12 @@ export class CalculatorImplTest {
   public a:number = 0;
   public b:number = 0;
 
-  @BeforeClass()
+  @BeforeAll()
   public initCalc():void {
     this.calcImpl = new CalculatorImpl();
   }
 
-  @AfterClass()
+  @AfterAll()
   public deleteCalc():void {
     this.calcImpl = null;
   }

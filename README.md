@@ -132,7 +132,7 @@ The JEC Tiger Project Sample only tests synchronous code of a `Calculator` sampl
 
 ## Update Release Notes
 
-**Current stable release:** [1.0.0](CHANGELOG.md#jec-sample-tiger-1.0.0)
+**Current stable release:** [1.0.2](CHANGELOG.md#jec-sample-tiger-1.0.2)
  
 For a complete listing of release notes for all JEC Tiger Sample update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 

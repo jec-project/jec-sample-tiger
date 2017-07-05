@@ -1,7 +1,17 @@
 # JEC Tiger Project Sample: Update Release Notes
 
+<a name="jec-sample-tiger-1.0.2"></a>
+## **1.0.2** (2017-06-05)
+
+### Bug Fixes
+
+### Features
+
+- JUTA Updates: replaces the `@AfterClass` and `@BeforeClass` decorators by the 
+new `@AfterAll` and `@BeforeAll` decorators.
+
 <a name="jec-sample-tiger-1.0.1"></a>
-## **1.0.0** (2017-06-05)
+## **1.0.1** (2017-05-06)
 
 ### Bug Fixes
 
