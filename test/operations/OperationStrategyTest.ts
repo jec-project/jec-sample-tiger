@@ -14,7 +14,8 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import { TestSuite, Test, Before, After } from "jec-juta";
+import { TestSuite, Test, Before, After, InstanciationPolicy, BeforeClass,
+         AfterClass, TestSuiteError} from "jec-juta";
 import { expect } from "chai";
 import { CalculatorOperation } from "../../src/operations/CalculatorOperation";
 import { OperationStrategy } from "../../src/operations/OperationStrategy";
@@ -25,9 +26,26 @@ import { DivideOperation } from "../../src/impl/DivideOperation";
 import { OperationStrategyError } from "../../src/exceptions/OperationStrategyError";
 
 @TestSuite({
-  description: "Tests the constants of the CalculatorOperation enum"
+  description: "Tests the constants of the CalculatorOperation enum",
+  instanciationPolicy: InstanciationPolicy.MULTIPLE
 })
 export class OperationStrategyTest {
+
+  public static numTests:number = NaN;
+
+  @BeforeClass()
+  public static initClass():void {
+    console.log("OperationStrategyTest.initClass");
+    OperationStrategyTest.numTests = 0;
+  }
+
+  @AfterClass()
+  public static resetClass():void {
+    console.log("OperationStrategyTest.resetClass");
+    if(OperationStrategyTest.numTests !== 5) {
+      throw new TestSuiteError("Test suite should creat 5 instances");
+    }
+  }
 
   public strategy:OperationStrategy = null;
 
@@ -40,13 +58,12 @@ export class OperationStrategyTest {
   public reset():void {
     this.strategy = null;
   }
-
-  OperationStrategyError
   
   @Test({
-    description: "#getOperation(x) should throx an error when x is not a constant of the CalculatorOperation enum"
+    description: "#getOperation(x) should throw an error when x is not a constant of the CalculatorOperation enum"
   })
   public testInvalidOperation():void {
+    OperationStrategyTest.numTests++;
     try {
       this.strategy.getOperation(28);
     } catch(e) {
@@ -58,6 +75,7 @@ export class OperationStrategyTest {
     description: "#getOperation(CalculatorOperation.ADD) should return an instance of AddOperation"
   })
   public testGetADD():void {
+    OperationStrategyTest.numTests++;
     expect(this.strategy.getOperation(CalculatorOperation.ADD))
           .to.be.an.instanceOf(AddOperation);
   }
@@ -66,6 +84,7 @@ export class OperationStrategyTest {
     description: "#getOperation(CalculatorOperation.REMOVE) should return an instance of RemoveOperation"
   })
   public testGetREMOVE():void {
+    OperationStrategyTest.numTests++;
     expect(this.strategy.getOperation(CalculatorOperation.REMOVE))
           .to.be.an.instanceOf(RemoveOperation);
   }
@@ -74,6 +93,7 @@ export class OperationStrategyTest {
     description: "#getOperation(CalculatorOperation.MULTIPLY) should return an instance of MultiplyOperation"
   })
   public testGetMULTIPLY():void {
+    OperationStrategyTest.numTests++;
     expect(this.strategy.getOperation(CalculatorOperation.MULTIPLY))
           .to.be.an.instanceOf(MultiplyOperation);
   }
@@ -82,6 +102,7 @@ export class OperationStrategyTest {
     description: "#getOperation(CalculatorOperation.DIVIDE) should return an instance of DivideOperation"
   })
   public testGetDIVIDE():void {
+    OperationStrategyTest.numTests++;
     expect(this.strategy.getOperation(CalculatorOperation.DIVIDE))
           .to.be.an.instanceOf(DivideOperation);
   }
