@@ -1,6 +1,6 @@
 {
   "name": "jec-sample-tiger",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "SEE LICENSE IN LICENSE",
   "description": "JEC Tiger Project Sample - A fully customizable application that shows how to implement Unit Tests with the JEC Tiger framework.",
   "author": {
@@ -31,8 +31,8 @@
   "devDependencies": {
     "@types/chai": "^3.5.1",
     "chai": "^3.5.0",
-    "jec-juta": "^1.1.1",
-    "jec-tiger": "^1.1.1",
+    "jec-juta": "^1.1.2",
+    "jec-tiger": "^1.1.3",
     "mocha": "^3.4.2",
     "typings": "^2.1.0"
   },

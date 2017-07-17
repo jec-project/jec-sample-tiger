@@ -14,7 +14,7 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import { TestSuite, Test, Before, After, InstanciationPolicy, BeforeClass,
+import { TestSuite, Test, Before, After, InstantiationPolicy, BeforeClass,
          AfterClass, TestSuiteError} from "jec-juta";
 import { expect } from "chai";
 import { CalculatorOperation } from "../../src/operations/CalculatorOperation";
@@ -27,7 +27,7 @@ import { OperationStrategyError } from "../../src/exceptions/OperationStrategyEr
 
 @TestSuite({
   description: "Tests the constants of the CalculatorOperation enum",
-  instanciationPolicy: InstanciationPolicy.MULTIPLE
+  instantiationPolicy: InstantiationPolicy.MULTIPLE
 })
 export class OperationStrategyTest {
 
