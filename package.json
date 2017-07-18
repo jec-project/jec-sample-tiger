@@ -30,6 +30,7 @@
   ],
   "devDependencies": {
     "@types/chai": "^3.5.1",
+    "@types/node": "^8.0.14",
     "chai": "^3.5.0",
     "jec-juta": "^1.1.2",
     "jec-tiger": "^1.1.3",

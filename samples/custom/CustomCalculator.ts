@@ -14,16 +14,16 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import { Calculator } from "../src/Calculator";
-import { CalculatorFactory } from "../src/CalculatorFactory";
-import { CalculatorOperation } from "../src/operations/CalculatorOperation";
+import { Calculator } from "../../src/Calculator";
+import { CalculatorFactory } from "../../src/CalculatorFactory";
+import { CalculatorOperation } from "../../src/operations/CalculatorOperation";
 
 /**
  * A composite class for simplifying the use of <code>Calculator</code> objects.
  */
 export class CustomCalculator {
 
-  ///////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
   // Constructor function
   //////////////////////////////////////////////////////////////////////////////
 
@@ -34,7 +34,7 @@ export class CustomCalculator {
     this.initObj();
   }
 
-  ///////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
   // Private properties
   //////////////////////////////////////////////////////////////////////////////
 
@@ -44,7 +44,7 @@ export class CustomCalculator {
    */
   private _calculator:Calculator = null;
 
-  ///////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
   // Private methods
   //////////////////////////////////////////////////////////////////////////////
 
@@ -56,7 +56,7 @@ export class CustomCalculator {
     this._calculator = factory.create();
   }
   
-  ///////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
   // Public methods
   //////////////////////////////////////////////////////////////////////////////
 
@@ -93,7 +93,7 @@ export class CustomCalculator {
    * @return {number} the result of the computation.
    */
   public multiply(a:number, b:number):number {
-    return this._calculator.doOperation(CalculatorOperation.REMOVE, a, b);
+    return this._calculator.doOperation(CalculatorOperation.MULTIPLY, a, b);
   }
   
   /**

@@ -32,11 +32,11 @@ juta/**/*.js
 node_modules
 
 #####################################
-# sample
+# samples
 #####################################
 
 # Ignore JavaScript files in sample folder
-sample/**/*.js
+samples/**/*.js
 
 #####################################
 # src

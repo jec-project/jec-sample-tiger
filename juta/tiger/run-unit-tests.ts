@@ -16,9 +16,15 @@
 
 import { TestStats } from "jec-juta";
 import { Tiger, TigerFactory } from "jec-tiger";
+import * as minimist from "minimist";
 
+let argv:string[] = process.argv.splice(2);
+let args:any = minimist(argv);
 let factory:TigerFactory = new TigerFactory();
 let tiger:Tiger = factory.create();
+
+if(args.samples) tiger.setTestPaths(["samples/test"]);
+
 tiger.process((stats:TestStats)=> {
   if(stats.error) console.error(stats.error);
   else {
