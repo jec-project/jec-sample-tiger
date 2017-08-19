@@ -1,13 +1,13 @@
 # JEC Tiger Project Sample: Update Release Notes
 
 <a name="jec-sample-tiger-1.0.4"></a>
-## **1.0.4** (2017-07-17)
+## **1.0.4** (2017-08-16)
 
 ### Bug Fixes
 
 ### Features
 
-- This release implement the JUTA 1.1.2 features.
+- This release implement the JUTA 1.1.3 features.
 
 <a name="jec-sample-tiger-1.0.3"></a>
 ## **1.0.3** (2017-07-14)
