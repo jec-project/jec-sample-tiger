@@ -83,8 +83,8 @@ import { TestStats } from "jec-juta";
 import {Tiger, TigerFactory} from "jec-tiger";
 
 let factory:TigerFactory = new TigerFactory();
-let tester:Tiger = factory.create();
-tester.process((stats:TestStats)=> {
+let tiger:Tiger = factory.create();
+tiger.process((stats:TestStats)=> {
   if(stats.error) console.error(stats.error);
  });
 ```
@@ -132,7 +132,7 @@ The JEC Tiger Project Sample only tests synchronous code of a `Calculator` sampl
 
 ## Update Release Notes
 
-**Current stable release:** [1.0.4](CHANGELOG.md#jec-sample-tiger-1.0.4)
+**Current stable release:** [1.0.5](CHANGELOG.md#jec-sample-tiger-1.0.5)
  
 For a complete listing of release notes for all JEC Tiger Sample update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 
