@@ -7,7 +7,7 @@ By using [JUTA](https://github.com/pechemann/jec-juta), Tiger test suites are si
 - test classes provide a better design for encapsulation than historical frameworks (mocha, jasmine)
 - test suites can be run from any JUTA implementation, based on historical frameworks (mocha, jasmine, etc.), without changing anyting in your code
 
-The [JEC Tiger framework](https://github.com/pechemann/jec-tiger), [JUTA Project](https://github.com/pechemann/jec-juta) and JEC Tiger Project Sample are parts of the [JavaScript Entreprise Container *(JEC)* Project][jec-url].
+The [JEC Tiger framework](https://github.com/pechemann/jec-tiger), [JUTA Project](https://github.com/pechemann/jec-juta) and JEC Tiger Project Sample are parts of the [JavaScript Enterprise Container *(JEC)* Project][jec-url].
 
 [![][jec-logo]][jec-url]
 
@@ -155,6 +155,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-[jec-url]: https://github.com/pechemann/JEC
+[jec-url]: http://jecproject.org
 [jec-juta-url]: https://github.com/pechemann/jec-juta
 [jec-logo]: https://raw.githubusercontent.com/pechemann/JEC/master/assets/jec-logos/jec-logo.png
