@@ -29,7 +29,7 @@ export class OperationErrorTest {
     description: "the OperationError should extend the Error class",
   })
   public testParentClass():void {
-    let error:OperationError = new OperationError(MESSAGE);
+    const error:OperationError = new OperationError(MESSAGE);
     expect(error).to.be.an.instanceOf(Error);
   }
 
@@ -37,7 +37,7 @@ export class OperationErrorTest {
     description: "the message passed as parameter of the constructor should be accessible from the 'message' property",
   })
   public testMessage():void {
-    let error:OperationError = new OperationError(MESSAGE);
+    const error:OperationError = new OperationError(MESSAGE);
     expect(error.message).to.equal(MESSAGE);
   }
 }

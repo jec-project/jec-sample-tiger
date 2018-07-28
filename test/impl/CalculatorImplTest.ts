@@ -53,7 +53,7 @@ export class CalculatorImplTest {
     description: "#doOperation(CalculatorOperation.ADD, a, b) should always (a + b)",
   })
   public testAdd():void {
-    let expected:number = this.a + this.b;
+    const expected:number = this.a + this.b;
     expect(
       this.calcImpl.doOperation(CalculatorOperation.ADD, this.a, this.b)
     ).to.equal(expected);
@@ -63,7 +63,7 @@ export class CalculatorImplTest {
     description: "#doOperation(CalculatorOperation.REMOVE, a, b) should (a - b)"
   })
   public testRemove():void {
-    let expected:number = this.a - this.b;
+    const expected:number = this.a - this.b;
     expect(
       this.calcImpl.doOperation(CalculatorOperation.REMOVE, this.a, this.b)
     ).to.equal(expected);
@@ -73,7 +73,7 @@ export class CalculatorImplTest {
     description: "#doOperation(CalculatorOperation.MULTIPLY, a, b) should return (a * b)"
   })
   public testMultiply():void {
-    let expected:number = this.a * this.b;
+    const expected:number = this.a * this.b;
     expect(
       this.calcImpl.doOperation(CalculatorOperation.MULTIPLY, this.a, this.b)
     ).to.equal(expected);
@@ -95,7 +95,7 @@ export class CalculatorImplTest {
   })
   public testDivide():void {
     if(this.b === 0) this.b += 1;
-    let expected:number = this.a / this.b;
+    const expected:number = this.a / this.b;
     expect(
       this.calcImpl.doOperation(CalculatorOperation.DIVIDE, this.a, this.b)
     ).to.equal(expected);

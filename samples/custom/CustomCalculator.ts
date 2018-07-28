@@ -52,7 +52,7 @@ export class CustomCalculator {
    * Initializes this object.
    */
   private initObj():void {
-    let factory:CalculatorFactory = new CalculatorFactory();
+    const factory:CalculatorFactory = new CalculatorFactory();
     this._calculator = factory.create();
   }
   

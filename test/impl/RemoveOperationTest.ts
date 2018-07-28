@@ -33,10 +33,10 @@ export class RemoveOperationTest {
     repeat: 10
   })
   public testCompute():void {
-    let a:number = this.generateRandomNumber();
-    let b:number = this.generateRandomNumber();
-    let expected:number = a - b;
-    let operation:Operation = new RemoveOperation();
+    const a:number = this.generateRandomNumber();
+    const b:number = this.generateRandomNumber();
+    const expected:number = a - b;
+    const operation:Operation = new RemoveOperation();
     expect(operation.compute(a, b)).to.equal(expected);
   }
   
@@ -45,9 +45,9 @@ export class RemoveOperationTest {
     repeat: 10
   })
   public testIdempotency():void {
-    let a:number = 8;
-    let b:number = 4;
-    let operation:Operation = new RemoveOperation();
+    const a:number = 8;
+    const b:number = 4;
+    const operation:Operation = new RemoveOperation();
     expect(operation.compute(a, b)).to.equal(4);
   }
 }

@@ -29,7 +29,7 @@ export class OperationStrategyErrorTest {
     description: "the OperationStrategyError should extend the Error class",
   })
   public testParentClass():void {
-    let error:OperationStrategyError = new OperationStrategyError(MESSAGE);
+    const error:OperationStrategyError = new OperationStrategyError(MESSAGE);
     expect(error).to.be.an.instanceOf(Error);
   }
 
@@ -37,7 +37,7 @@ export class OperationStrategyErrorTest {
     description: "the message passed as parameter of the constructor should be accessible from the 'message' property",
   })
   public testMessage():void {
-    let error:OperationStrategyError = new OperationStrategyError(MESSAGE);
+    const error:OperationStrategyError = new OperationStrategyError(MESSAGE);
     expect(error.message).to.equal(MESSAGE);
   }
 }

@@ -1,7 +1,17 @@
 # JEC Tiger Project Sample: Update Release Notes
 
-<a name="jec-sample-tiger-1.0.5"></a>
-## **1.0.5** (2017-08-20)
+<a name="jec-sample-tiger-1.0.7"></a>
+## **1.0.7** (2017-08-28)
+
+### Bug Fixes
+
+### Features
+
+- Updating all dependencies
+- Test cases improvements
+
+<a name="jec-sample-tiger-1.0.6"></a>
+## **1.0.6** (2017-08-20)
 
 ### Bug Fixes
 

@@ -32,10 +32,10 @@ export class AddOperationTest {
     description: "#compute(a, b) should return (a + b)"
   })
   public testCompute():void {
-    let a:number = this.generateRandomNumber();
-    let b:number = this.generateRandomNumber();
-    let expected:number = a + b;
-    let operation:Operation = new AddOperation();
+    const a:number = this.generateRandomNumber();
+    const b:number = this.generateRandomNumber();
+    const expected:number = a + b;
+    const operation:Operation = new AddOperation();
     expect(operation.compute(a, b)).to.equal(expected);
   }
   
@@ -44,9 +44,9 @@ export class AddOperationTest {
     repeat: 10
   })
   public testIdempotency():void {
-    let a:number = 2;
-    let b:number = 7;
-    let operation:Operation = new AddOperation();
+    const a:number = 2;
+    const b:number = 7;
+    const operation:Operation = new AddOperation();
     expect(operation.compute(a, b)).to.equal(9);
   }
 }

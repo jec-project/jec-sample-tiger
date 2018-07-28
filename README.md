@@ -1,5 +1,9 @@
 # JEC Tiger Project Sample
 
+[![JEC version](https://img.shields.io/badge/JEC-1.0-%23ba00ff.svg)](http://jecproject.org)
+[![npm version](https://badge.fury.io/js/jec-sample-tiger.svg)](https://www.npmjs.com/package/jec-sample-tiger)
+[![Apache 2.0](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 The JEC Tiger Project Sample shows a concrete use case of creating unit tests with the [JEC Tiger framework](https://github.com/jec-projct/jec-tiger). It uses [JUTA](https://github.com/jec-projct/jec-juta) annotations to write test cases without paying attention about the unit test framework that will run test suites.
 
 By using [JUTA](https://github.com/jec-projct/jec-juta), Tiger test suites are similar to Junit tests, with the following advantages:
@@ -82,8 +86,8 @@ The `juta` folder is where JUTA configuration files are located. The following c
 import { TestStats } from "jec-juta";
 import {Tiger, TigerFactory} from "jec-tiger";
 
-let factory:TigerFactory = new TigerFactory();
-let tiger:Tiger = factory.create();
+const factory:TigerFactory = new TigerFactory();
+const tiger:Tiger = factory.create();
 tiger.process((stats:TestStats)=> {
   if(stats.error) console.error(stats.error);
  });
@@ -132,7 +136,7 @@ The JEC Tiger Project Sample only tests synchronous code of a `Calculator` sampl
 
 ## Update Release Notes
 
-**Current stable release:** [1.0.5](CHANGELOG.md#jec-sample-tiger-1.0.5)
+**Current stable release:** [1.0.6](CHANGELOG.md#jec-sample-tiger-1.0.6)
  
 For a complete listing of release notes for all JEC Tiger Sample update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 

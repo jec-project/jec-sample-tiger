@@ -33,8 +33,8 @@ export class DivideOperationTest {
     description: "#compute(a, 0) should throw an error"
   })
   public tesDivideByZero():void {
-    let a:number = this.generateRandomNumber();
-    let operation:Operation = new DivideOperation();
+    const a:number = this.generateRandomNumber();
+    const operation:Operation = new DivideOperation();
     try {
       operation.compute(a, 0);
     } catch (e) {
@@ -46,11 +46,11 @@ export class DivideOperationTest {
     description: "#compute(a, b) should return (a / b)"
   })
   public testCompute():void {
-    let a:number = this.generateRandomNumber();
+    const a:number = this.generateRandomNumber();
     let b:number = this.generateRandomNumber();
     if(b === 0) b = 6;
-    let expected:number = a / b;
-    let operation:Operation = new DivideOperation();
+    const expected:number = a / b;
+    const operation:Operation = new DivideOperation();
     expect(operation.compute(a, b)).to.equal(expected);
   }
   
@@ -59,9 +59,9 @@ export class DivideOperationTest {
     repeat: 10
   })
   public testIdempotency():void {
-    let a:number = 8;
-    let b:number = 4;
-    let operation:Operation = new DivideOperation();
+    const a:number = 8;
+    const b:number = 4;
+    const operation:Operation = new DivideOperation();
     expect(operation.compute(a, b)).to.equal(2);
   }
 }

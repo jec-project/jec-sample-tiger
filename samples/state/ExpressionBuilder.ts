@@ -42,7 +42,7 @@ export class ExpressionBuilder {
    * @return {Expression} a new expression <code>Expression</code> instance.
    */
   public build(value:number):Expression {
-    let exp:Expression = new Expression();
+    const exp:Expression = new Expression();
     exp.value = value;
     return exp;
   }

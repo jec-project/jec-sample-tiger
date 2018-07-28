@@ -28,9 +28,9 @@ export class CalculatorFactoryTest {
     description: "#create() should return new objects that implement the Calculator interface"
   })
   public testCreate():void {
-    let factory:CalculatorFactory = new CalculatorFactory();
-    let calc1:Calculator = factory.create();
-    let calc2:Calculator = factory.create();
+    const factory:CalculatorFactory = new CalculatorFactory();
+    const calc1:Calculator = factory.create();
+    const calc2:Calculator = factory.create();
     expect(calc1).not.to.be.null;
     expect(calc2).not.to.be.null;
     expect(calc1).not.to.equal(calc2);

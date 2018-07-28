@@ -85,13 +85,13 @@ export class StateCalculator {
    * Initializes this object.
    */
   private initObj():void {
-    let factory:CalculatorFactory = new CalculatorFactory();
+    const factory:CalculatorFactory = new CalculatorFactory();
     this._calculator = factory.create();
-	this._expStack = new Array<Expression>();
-	this._expBuilder = new ExpressionBuilder();
-	this._stateMachine = new StackStateMachine();
-	this._stateValidator = new StackStateValidator();
-	this._state = StackState.EMPTY;
+    this._expStack = new Array<Expression>();
+    this._expBuilder = new ExpressionBuilder();
+    this._stateMachine = new StackStateMachine();
+    this._stateValidator = new StackStateValidator();
+    this._state = StackState.EMPTY;
   }
   
   /**
@@ -103,7 +103,7 @@ export class StateCalculator {
    * 								                calculator.
    */
   private setState(expressionType:number):void {
-    let nextState:number = this._stateMachine.getNextState(
+    const nextState:number = this._stateMachine.getNextState(
       this._state, expressionType
     );
     if(this._stateValidator.validate(nextState) === false) {
@@ -176,24 +176,24 @@ export class StateCalculator {
    * the result.
    */
   public compute():number {
-	let result:number = 0;
-	let len:number = this._expStack.length;
-	let operand1:Expression = null;
-	let operand2:Expression = null;
-	let operator:Expression = null;
-	let cursor:number = len - 1;
-	while(len -= 3) {
-		operand1 = this._expStack[cursor];
-		operator = this._expStack[cursor - 1];
-		operand2 = this._expStack[cursor - 2];
-		result += this._calculator.doOperation(
-      operator.value,
-      operand1.value,
-      operand2.value
-    );
-		cursor = len;
-	}
-	this.reset();
+    let result:number = 0;
+    let len:number = this._expStack.length;
+    let operand1:Expression = null;
+    let operand2:Expression = null;
+    let operator:Expression = null;
+    let cursor:number = len - 1;
+    while(len -= 3) {
+      operand1 = this._expStack[cursor];
+      operator = this._expStack[cursor - 1];
+      operand2 = this._expStack[cursor - 2];
+      result += this._calculator.doOperation(
+        operator.value,
+        operand1.value,
+        operand2.value
+      );
+      cursor = len;
+    }
+    this.reset();
     return result;
   }
 }

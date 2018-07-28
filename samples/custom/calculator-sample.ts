@@ -16,7 +16,7 @@
 
 import { CustomCalculator } from "./CustomCalculator";
 
-let calculator:CustomCalculator = new CustomCalculator();
+const calculator:CustomCalculator = new CustomCalculator();
 
 let result:number = calculator.add(3, 4);
 console.log(result);
